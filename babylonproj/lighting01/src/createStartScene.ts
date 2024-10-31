@@ -12,7 +12,7 @@ import { Scene, ArcRotateCamera, Vector3,
 
 function createBox(scene: Scene ){
 let box = MeshBuilder.CreateBox("box",{size: 1}, scene);
-box.position.y = 3;
+box.position.y = 4;
 
 return box;
 }
