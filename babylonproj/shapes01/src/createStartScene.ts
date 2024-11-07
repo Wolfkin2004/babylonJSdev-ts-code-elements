@@ -55,7 +55,7 @@ function createBox(scene: Scene) {
   box.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   box.material = texture;
   return box;
@@ -72,7 +72,7 @@ function createCylinder(scene: Scene) {
   cylinder.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cylinder.material = texture;
   return cylinder;
@@ -89,7 +89,7 @@ function createCone(scene: Scene) {
   cone.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cone.material = texture;
   return cone;
@@ -106,7 +106,7 @@ function createTriangle(scene: Scene) {
   triangle.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   triangle.material = texture;
   return triangle;
@@ -122,12 +122,12 @@ function createCapsule(scene: Scene) {
   capsule.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 0.6, 0.6);
   capsule.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   capsule.material = texture;
   return capsule;
@@ -143,12 +143,12 @@ function createTorus(scene: Scene) {
   torus.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(0.6, 0.6, 1);
   torus.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   torus.material = texture;
   return torus;
@@ -166,7 +166,7 @@ function createTube(scene: Scene) {
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   tube.material = texture;
   return tube;
@@ -200,7 +200,7 @@ function createExtrusion(scene: Scene) {
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   extrusion.material = texture;
   return extrusion;
@@ -216,7 +216,7 @@ function createOctahedron(scene: Scene) {
   octahedron.position.z = 0;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   octahedron.material = texture;
   return octahedron;
