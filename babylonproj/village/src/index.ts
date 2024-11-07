@@ -1,4 +1,4 @@
-import { Engine } from "@babylonjs/core";
+import { Engine} from "@babylonjs/core";
 import createStartScene from "./createStartScene";
 import createRunScene from "./createRunScene";
 import "./main.css";
@@ -18,4 +18,3 @@ createRunScene(startScene);
 eng.runRenderLoop(() => {
   startScene.scene.render();
 });
-
