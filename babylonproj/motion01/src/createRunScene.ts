@@ -1,4 +1,4 @@
-import { AbstractMesh, CubeTexture, _ENVTextureLoader } from "@babylonjs/core";
+import { AbstractMesh, ActionManager, CubeTexture, _ENVTextureLoader } from "@babylonjs/core";
 import { SceneData } from "./interfaces";
 import {
   keyActionManager,
