@@ -1,7 +1,3 @@
-// import "@babylonjs/core/Debug/debugLayer";
-// import "@babylonjs/inspector";
-// import "@babylonjs/core/Debug/debugLayer";
-// import "@babylonjs/inspector";
 import { SceneData } from "./interfaces";
 
 import {
