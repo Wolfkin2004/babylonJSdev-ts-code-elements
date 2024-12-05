@@ -21,5 +21,3 @@ export interface SceneData {
   camera: Camera;
   shadowGenerator: ShadowGenerator;
 }
-
-  
