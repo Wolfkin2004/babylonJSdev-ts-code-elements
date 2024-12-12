@@ -102,7 +102,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/floor.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -118,7 +118,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/floor.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);

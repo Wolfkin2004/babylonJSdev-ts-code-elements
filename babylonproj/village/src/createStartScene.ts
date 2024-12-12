@@ -48,7 +48,7 @@ function createTerrain(scene: Scene) {
 function createGround(scene: Scene) {
   const groundMaterial = new StandardMaterial("groundMaterial");
   groundMaterial.diffuseTexture = new Texture(
-    "./assets/environments/villagegreen.png"
+    "./assets/environments/villagesnow.png"
   );
   groundMaterial.diffuseTexture.hasAlpha = true;
   groundMaterial.backFaceCulling = false;
