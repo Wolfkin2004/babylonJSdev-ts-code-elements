@@ -184,6 +184,7 @@ function createExtrusion(scene: Scene) {
     new Vector3(-0.2, 0.2, 0),
   ];
 
+
   const myPath = [
     new Vector3(0.75, -0.75, -0.2),
     new Vector3(0.75, -0.75, -1.2),
@@ -198,6 +199,7 @@ function createExtrusion(scene: Scene) {
       sideOrientation: Mesh.DOUBLESIDE,
     },
     scene
+    
   );
 
   var texture = new StandardMaterial("reflective", scene);
