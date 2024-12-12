@@ -27,7 +27,7 @@ function createTerrain(scene: Scene) {
   //Create large ground for valley environment
   const largeGroundMat = new StandardMaterial("largeGroundMat");
   largeGroundMat.diffuseTexture = new Texture(
-    "./assets/environments/valleygrass.png"
+    "./assets/environments/snow.png"
   );
 
   const largeGround = MeshBuilder.CreateGroundFromHeightMap(
@@ -199,9 +199,9 @@ function createHouses(scene: Scene, style: number) {
 function createTrees(scene: Scene) {
   const spriteManagerTrees = new SpriteManager(
     "treesManager",
-    "./assets/sprites/tree.png",
+    "./assets/sprites/snowtree.png",
     2000,
-    { width: 512, height: 1024 },
+    { width: 1517, height: 1920 },
     scene
   );
 
@@ -210,14 +210,14 @@ function createTrees(scene: Scene) {
     const tree: Sprite = new Sprite("tree", spriteManagerTrees);
     tree.position.x = Math.random() * -30;
     tree.position.z = Math.random() * 20 + 8;
-    tree.position.y = 0.2;
+    tree.position.y = 0.7;
   }
 
   for (let i = 0; i < 500; i++) {
     const tree = new Sprite("tree", spriteManagerTrees);
     tree.position.x = Math.random() * 25 + 7;
     tree.position.z = Math.random() * -35 + 8;
-    tree.position.y = 0.2;
+    tree.position.y = 0.7;
   }
   // nothing returned by this function
 }

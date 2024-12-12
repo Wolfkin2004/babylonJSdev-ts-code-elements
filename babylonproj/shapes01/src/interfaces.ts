@@ -3,6 +3,7 @@ import {
   Mesh,
   HemisphericLight,
   Camera,
+  PointLight,
 } from "@babylonjs/core";
 
 export interface SceneData {

@@ -23,13 +23,13 @@ function createGround(scene: Scene) {
     { width: 3, height: 3 },
     scene
   );
-  var groundMaterial = new StandardMaterial("groundMaterial", scene);
-  groundMaterial.backFaceCulling = false;
-  ground.material = groundMaterial;
-  groundMaterial.diffuseColor = new Color3(0.1, 1, 0.5);
+  var texture = new StandardMaterial("groundMaterial", scene);
+  texture.emissiveTexture = new Texture("./src/assets/textures/playground.png", scene);
+  texture.backFaceCulling = false;
+  ground.material = texture;
+  texture.diffuseColor = new Color3(0.1, 1, 0.5);
   return ground;
 }
-
 
 function createSphere(scene: Scene) {
   let sphere = MeshBuilder.CreateSphere(
@@ -37,7 +37,7 @@ function createSphere(scene: Scene) {
     { diameter: 1, segments: 32 },
     scene
   );
-  sphere.position.y = 0;
+  sphere.position.y = 2.5;
   var texture = new StandardMaterial("grass1", scene);
   texture.emissiveTexture = new Texture("./src/assets/textures/lavatile.jpg", scene);
   sphere.material = texture;
@@ -55,7 +55,7 @@ function createBox(scene: Scene) {
   box.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/playgroundbox.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   box.material = texture;
   return box;
@@ -68,11 +68,11 @@ function createCylinder(scene: Scene) {
     scene
   );
   cylinder.position.x = 1;
-  cylinder.position.y = 1;
+  cylinder.position.y = 0.51;
   cylinder.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/red.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cylinder.material = texture;
   return cylinder;
@@ -81,15 +81,15 @@ function createCylinder(scene: Scene) {
 function createCone(scene: Scene) {
   let cone = MeshBuilder.CreateCylinder(
     "cone",
-    { height: 1, diameterBottom: 0.7, diameterTop: 0 },
+    { height: 0.5, diameterBottom: 0.7, diameterTop: 0 },
     scene
   );
   cone.position.x = 1;
-  cone.position.y = 1;
+  cone.position.y = 0.29;
   cone.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/orange.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cone.material = texture;
   return cone;
@@ -98,19 +98,20 @@ function createCone(scene: Scene) {
 function createTriangle(scene: Scene) {
   let triangle = MeshBuilder.CreateCylinder(
     "triangle",
-    { height: 1, diameter: 0.7, tessellation: 3 },
+    { height: 0.5, diameter: 0.7, tessellation: 3 },
     scene
   );
-  triangle.position.x = -1;
-  triangle.position.y = 1;
-  triangle.position.z = -1;
+  triangle.position.x = 1;
+  triangle.position.y = 0.29;
+  triangle.position.z = -0.10;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/pink.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   triangle.material = texture;
   return triangle;
 }
+
 function createCapsule(scene: Scene) {
   let capsule = MeshBuilder.CreateCapsule(
     "capsule",
@@ -118,16 +119,16 @@ function createCapsule(scene: Scene) {
     scene
   );
   capsule.position.x = -1;
-  capsule.position.y = -1;
+  capsule.position.y = 0.65;
   capsule.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/blue.png", scene);
   texture.diffuseColor = new Color3(1, 0.6, 0.6);
   capsule.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/blue.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   capsule.material = texture;
   return capsule;
@@ -135,38 +136,38 @@ function createCapsule(scene: Scene) {
 function createTorus(scene: Scene) {
   let torus = MeshBuilder.CreateTorus(
     "torus",
-    { diameter: 0.7, thickness: 0.6, tessellation: 10 },
+    { diameter: 0.7, thickness: 0.1, tessellation: 10 },
     scene
   );
-  torus.position.x = -1;
-  torus.position.y = -1;
+  torus.position.x = 0.05;
+  torus.position.y = 0.1;
   torus.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/tyre.png", scene);
   texture.diffuseColor = new Color3(0.6, 0.6, 1);
   torus.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/tyre.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   torus.material = texture;
   return torus;
 }
 function createTube(scene: Scene) {
   const myPath = [
-    new Vector3(0.85, -0.85, 0.85),
-    new Vector3(0.35, -0.35, 0.35),
+    new Vector3(0.85, 0.85, 0.85),
+    new Vector3(0.35, 0.35, 0.35),
   ];
 
   const tube = MeshBuilder.CreateTube(
     "tube",
-    { path: myPath, radius: 0.4, sideOrientation: Mesh.DOUBLESIDE },
+    { path: myPath, radius: 0.2, sideOrientation: Mesh.DOUBLESIDE },
     scene
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/yellow.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   tube.material = texture;
   return tube;
@@ -200,7 +201,7 @@ function createExtrusion(scene: Scene) {
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/green.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   extrusion.material = texture;
   return extrusion;
@@ -216,7 +217,7 @@ function createOctahedron(scene: Scene) {
   octahedron.position.z = 0;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/reflectivity.png", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/green.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   octahedron.material = texture;
   return octahedron;
@@ -227,10 +228,12 @@ function createPlane(scene: Scene) {
     { size: 3, sideOrientation: Mesh.DOUBLESIDE },
     scene
   );
-  plane.position.y = 0;
+  plane.position.y = 1.5;
+  plane.position.z = -1.5;
+  
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/wood.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/sky.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   plane.material = texture;
   return plane;
@@ -242,11 +245,12 @@ function createPlane2(scene: Scene) {
     { size: 3, sideOrientation: Mesh.DOUBLESIDE },
     scene
   );
-  plane.position.y = 0;
+  plane.position.y = 1.5;
+  plane.position.x = 1.5;
   plane.rotation = new Vector3(0, Math.PI / 2, 0);
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/wood.jpg", scene);
+  texture.ambientTexture = new Texture("./src/assets/textures/sky.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   plane.material = texture;
   return plane;
@@ -280,6 +284,7 @@ function createArcRotateCamera(scene: Scene) {
   camera.attachControl(true);
   return camera;
 }
+
 export default function createStartScene(engine: Engine) {
 
   let scene = new Scene(engine);
@@ -321,3 +326,4 @@ export default function createStartScene(engine: Engine) {
   };
   return that;
 }
+
