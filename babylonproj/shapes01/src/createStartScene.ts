@@ -24,7 +24,7 @@ function createGround(scene: Scene) {
     scene
   );
   var texture = new StandardMaterial("groundMaterial", scene);
-  texture.emissiveTexture = new Texture("./src/assets/textures/playground.png", scene);
+  texture.emissiveTexture = new Texture("./assets/textures/playground.png", scene);
   texture.backFaceCulling = false;
   ground.material = texture;
   texture.diffuseColor = new Color3(0.1, 1, 0.5);
@@ -39,7 +39,7 @@ function createSphere(scene: Scene) {
   );
   sphere.position.y = 2.5;
   var texture = new StandardMaterial("grass1", scene);
-  texture.emissiveTexture = new Texture("./src/assets/textures/lavatile.jpg", scene);
+  texture.emissiveTexture = new Texture("./assets/textures/lavatile.jpg", scene);
   sphere.material = texture;
   return sphere;
 }
@@ -55,7 +55,7 @@ function createBox(scene: Scene) {
   box.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/playgroundbox.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/playgroundbox.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   box.material = texture;
   return box;
@@ -72,7 +72,7 @@ function createCylinder(scene: Scene) {
   cylinder.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/red.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/red.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cylinder.material = texture;
   return cylinder;
@@ -89,7 +89,7 @@ function createCone(scene: Scene) {
   cone.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/orange.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/orange.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cone.material = texture;
   return cone;
@@ -106,7 +106,7 @@ function createTriangle(scene: Scene) {
   triangle.position.z = -0.10;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/pink.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/pink.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   triangle.material = texture;
   return triangle;
@@ -123,12 +123,12 @@ function createCapsule(scene: Scene) {
   capsule.position.z = -1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/blue.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/blue.png", scene);
   texture.diffuseColor = new Color3(1, 0.6, 0.6);
   capsule.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/blue.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/blue.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   capsule.material = texture;
   return capsule;
@@ -144,12 +144,12 @@ function createTorus(scene: Scene) {
   torus.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/tyre.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/tyre.png", scene);
   texture.diffuseColor = new Color3(0.6, 0.6, 1);
   torus.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/tyre.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/tyre.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   torus.material = texture;
   return torus;
@@ -167,7 +167,7 @@ function createTube(scene: Scene) {
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/yellow.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/yellow.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   tube.material = texture;
   return tube;
@@ -203,7 +203,7 @@ function createExtrusion(scene: Scene) {
   );
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/green.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/green.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   extrusion.material = texture;
   return extrusion;
@@ -219,7 +219,7 @@ function createOctahedron(scene: Scene) {
   octahedron.position.z = 0;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/green.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/green.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   octahedron.material = texture;
   return octahedron;
@@ -235,7 +235,7 @@ function createPlane(scene: Scene) {
   
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/sky.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/sky.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   plane.material = texture;
   return plane;
@@ -252,7 +252,7 @@ function createPlane2(scene: Scene) {
   plane.rotation = new Vector3(0, Math.PI / 2, 0);
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./src/assets/textures/sky.png", scene);
+  texture.ambientTexture = new Texture("./assets/textures/sky.png", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   plane.material = texture;
   return plane;
