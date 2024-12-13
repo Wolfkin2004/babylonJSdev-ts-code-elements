@@ -2,6 +2,7 @@ import { Scene, Sound } from "@babylonjs/core";
 import { SceneData } from "./interfaces";
 import { Button, AdvancedDynamicTexture } from "@babylonjs/gui/2D";
 
+
 function createSceneButton(
   scene: Scene,
   name: string,
@@ -20,7 +21,7 @@ function createSceneButton(
   button.background = "green";
   const buttonClick: Sound = new Sound(
     "MenuClickSFX",
-    "./assets/audio/menu-click.wav",
+    "./assets/audio/button.mp3",
     scene,
     null,
     {
@@ -50,4 +51,6 @@ export default function createGUIScene(runScene: SceneData) {
   );
   
   runScene.scene.onAfterRenderObservable.add(() => {});
+
+  
 }
