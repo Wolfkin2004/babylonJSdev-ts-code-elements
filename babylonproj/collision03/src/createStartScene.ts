@@ -18,7 +18,7 @@ import {
 } from "@babylonjs/core";
 
 function backgroundMusic(scene: Scene): Sound{
-  let music = new Sound("music", "./assets/audio/arcade-kid.mp3", scene,  null ,
+  let music = new Sound("music", "./assets/audio/desert.mp3", scene,  null ,
    {
       loop: true,
       autoplay: true
@@ -37,7 +37,7 @@ function backgroundMusic(scene: Scene): Sound{
 
 function createGround(scene: Scene) {
   const groundMaterial = new StandardMaterial("groundMaterial");
-  const groundTexture = new Texture("./assets/textures/wood.jpg");
+  const groundTexture = new Texture("./assets/textures/sand.png");
   groundTexture.uScale  = 4.0; //Repeat 5 times on the Vertical Axes
   groundTexture.vScale  = 4.0; //Repeat 5 times on the Horizontal Axes
   groundMaterial.diffuseTexture = groundTexture;
@@ -102,7 +102,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/floor.png",
+    "./assets/textures/sandstone.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -118,7 +118,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/floor.png",
+    "./assets/textures/sandstone.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
