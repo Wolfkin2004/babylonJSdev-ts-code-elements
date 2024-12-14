@@ -18,7 +18,7 @@ import {
 import createRunScene from "./createRunScene";
 
 function backgroundMusic(scene: Scene): Sound{
-  let music = new Sound("music", "./assets/audio/arcade-kid.mp3", scene,  null ,
+  let music = new Sound("music", "./assets/audio/desert.mp3", scene,  null ,
    {
       loop: true,
       autoplay: true
@@ -37,7 +37,7 @@ function backgroundMusic(scene: Scene): Sound{
 
 function createGround(scene: Scene) {
   const groundMaterial = new StandardMaterial("groundMaterial");
-  const groundTexture = new Texture("./assets/textures/wood.jpg");
+  const groundTexture = new Texture("./assets/textures/sand.png");
   groundTexture.uScale  = 4.0; //Repeat 5 times on the Vertical Axes
   groundTexture.vScale  = 4.0; //Repeat 5 times on the Horizontal Axes
   groundMaterial.diffuseTexture = groundTexture;
@@ -102,7 +102,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/sandstone.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -118,7 +118,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/sandstone.png",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -126,6 +126,21 @@ function createBox2(scene: Scene) {
   return box;
 }
 
+function createBox3(scene: Scene) {
+  let box = MeshBuilder.CreateBox("box", { width: 1, height: 1 }, scene);
+  box.position.x = -0.9;
+  box.position.y = 12;
+  box.position.z = 1;
+
+  var texture = new StandardMaterial("reflective", scene);
+  texture.ambientTexture = new Texture(
+    "./assets/textures/sandstone.png",
+    scene
+  );
+  texture.diffuseColor = new Color3(1, 1, 1);
+  box.material = texture;
+  return box;
+}
 
 function importMeshA(scene: Scene, x: number, y: number) {
   let item: Promise<void | ISceneLoaderAsyncResult> =
@@ -154,6 +169,7 @@ export default function gameScene(engine: Engine) {
   let camera = createArcRotateCamera(scene);
   let box1 = createBox1(scene);
   let box2 = createBox2(scene);
+  let box3 = createBox3(scene);
   let player = importMeshA(scene, 0, 0);
   let ground = createGround(scene);
 
@@ -164,6 +180,7 @@ export default function gameScene(engine: Engine) {
     camera,
     box1,
     box2,
+    box3,
     player,
     ground,
   };

@@ -55,9 +55,9 @@ import {
         button.height = "60px";
         button.color = "white";
         button.cornerRadius = 20;
-        button.background = "purple";
+        button.background = "blue";
 
-        const buttonClick = new Sound("MenuClickSFX", "./audio/menu-click.wav", scene, null, {
+        const buttonClick = new Sound("MenuClickSFX", "./audio/button.mp3", scene, null, {
           loop: false,
           autoplay: false,
         });
@@ -119,7 +119,7 @@ import {
       textBG: GUI.Rectangle;
       titleText: GUI.TextBlock;
       button1: GUI.Button;
-      button2: GUI.Button;
+      
       skybox: Mesh;
       hemiLight: HemisphericLight;
       camera: Camera;
@@ -130,10 +130,10 @@ import {
     //----------------------------------------------------------
     let scene = new Scene(engine);
     let advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI("myUI", true);
-    let textBG = createRectangle(scene, "300px", "100px", "0px", "-200px", 20, "white", 4, "purple", advancedTexture);
-    let titleText = createText(scene, "THE GAME", "0px", "-200px", "45", "white", advancedTexture);
-    let button1 = createSceneButton(scene, "but1", "Start Game", "0px", "-75px", advancedTexture);
-    let button2 = createSceneButton(scene, "but2", "Options", "0px", "0px", advancedTexture);
+    let textBG = createRectangle(scene, "300px", "100px", "0px", "-200px", 20, "white", 4, "blue", advancedTexture);
+    let titleText = createText(scene, "Element 4", "0px", "-200px", "45", "white", advancedTexture);
+    let button1 = createSceneButton(scene, "but1", "Start", "0px", "-75px", advancedTexture);
+    
 
     let skybox = createSkybox(scene);
     //Scene Lighting & Camera
@@ -146,7 +146,7 @@ import {
       textBG,
       titleText,
       button1,
-      button2,
+    
       skybox,
       hemiLight,
       camera

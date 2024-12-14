@@ -28,7 +28,9 @@
     "shapes01build": "tsc && vite build shapes01",
     "shapes01preview": "vite preview shapes01 --host",
     "swapperbuild": "vite build swapper",
-    "swapperpreview": "vite preview swapper --host"
+    "swapperpreview": "vite preview swapper --host",
+    "gui04build": "vite build Gui04",
+    "gui04preview": "vite preview Gui --host"
   
   },
   "devDependencies": {
